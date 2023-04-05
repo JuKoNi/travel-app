@@ -1,21 +1,36 @@
 <template>
-  <div id="nav">
-    <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="/brazil">Brazil</RouterLink>
-    <RouterLink to="/hawaii">Hawaii</RouterLink>
-    <RouterLink to="/jamaica">Jamaica</RouterLink>
-    <RouterLink to="/panama">Panama</RouterLink>
-  </div>
-
+  <TheNavigation />
 
   <div class="container">
-    <RouterView></RouterView>
+    <RouterView v-slot="{ Component }">
+      <Transition name="fade" mode="out-in">
+        <component :is="Component" :key="$route.path"></component>
+      </Transition>
+    </RouterView>
+
   </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts">
 
+import TheNavigation from './components/TheNavigation.vue';
+
+export default {
+  components: { TheNavigation }
+}
 </script>
+
+<style lang="css">
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+
+.fade-enter,
+.fade-leave {
+  opacity: 0;
+}
+</style>
 
 
 
