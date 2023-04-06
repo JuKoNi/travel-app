@@ -12,6 +12,8 @@ const destination = computed(() =>  sourceData.destinations.find(destination => 
 const experience = computed(() =>  destination.value?.experiences.find(experience => experience.slug === props.experienceSlug))
 
 </script>
+
+
 <template>
     <section>
         <h1>{{ experience?.name }}</h1>

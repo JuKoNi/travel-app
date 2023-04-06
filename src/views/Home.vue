@@ -1,3 +1,10 @@
+<script setup lang="ts">
+import sourceData from '@/data.json';
+
+const destinations = sourceData.destinations
+
+</script>
+
 <template>
     <div class="home">
         <h1>All Destinations</h1>
@@ -14,17 +21,3 @@
     </div>
 </template>
 
-<script lang="ts">
-import sourceData from '@/data.json'
-
-export default {
-    data() {
-        return {
-            destinations: sourceData.destinations
-        }
-    }
-}
-</script>
-<script setup lang="ts">
-
-</script>

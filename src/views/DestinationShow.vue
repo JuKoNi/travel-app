@@ -18,6 +18,8 @@ const props = defineProps<Props>()
 const destination = computed(() => sourceData.destinations.find((destination => destination.id === props.id)))
 </script>
 
+
+
 <template>
     <div>
         <section v-if="destination" class="destination">

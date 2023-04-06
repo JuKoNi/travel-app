@@ -1,3 +1,12 @@
+<script setup lang="ts">
+import { defineProps } from 'vue'
+
+const props = defineProps({
+  experience: {type: Object, required: true}
+})
+
+</script>
+
 <template>
     <div class="card">
         <img :src="`/images/${experience.image}`" :alt="experience.name">
@@ -7,10 +16,3 @@
     </div>
 </template>
 
-<script lang="ts">
-export default {
-    props: {
-        experience: {type: Object, required: true, }
-    }
-}
-</script>

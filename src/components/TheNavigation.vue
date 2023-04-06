@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import sourceData from '@/data.json'
+const destinations = sourceData.destinations
+
+</script>
+
 <template>
     <div id="nav">
         <RouterLink id="logo" to="/">Jullans resor</RouterLink>
@@ -11,14 +17,3 @@
     </div>
 </template>
 
-<script lang="ts">
-import sourceData from '@/data.json'
-
-export default {
-    data() {
-        return {
-            destinations: sourceData.destinations
-        }
-    }
-}
-</script>
