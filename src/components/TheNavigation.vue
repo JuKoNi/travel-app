@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import sourceData from '@/data.json'
-const destinations = sourceData.destinations
+import { ref } from 'vue';
+
+const destinations = ref(sourceData.destinations)
 
 </script>
 
